@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "952922104031",
+    "project_id": "rehab-app-81d83",
+    "storage_bucket": "rehab-app-81d83.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:952922104031:android:43c92932a200f8de3a096a",
+        "android_client_info": {
+          "package_name": "com.flutterassi.rehab_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "952922104031-jf8ulgi1lq4gvucksglvasm2nitviroh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADuDKOie6ogRE5QRWwldd4M553tEEEgkM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "952922104031-jf8ulgi1lq4gvucksglvasm2nitviroh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
