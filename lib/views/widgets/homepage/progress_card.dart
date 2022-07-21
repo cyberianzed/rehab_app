@@ -44,7 +44,7 @@ class ProgressCard extends StatelessWidget {
             borderRadius: BorderRadius.circular(5),
             child: LinearProgressIndicator(
               value: .5,
-              color: kpercentColor,
+              color: kblueColor,
               backgroundColor: const Color(0xffc4c4c4),
               //TODO Heigh
               minHeight: 7,

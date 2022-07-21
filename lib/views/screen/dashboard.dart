@@ -20,8 +20,8 @@ class DashboardPage extends StatelessWidget {
             child: IndexedStack(
               index: controller.tabIndex,
               children: const [
-                HomePage(),
                 RehabPage(),
+                HomePage(),
                 PracticePage(),
                 ProfilePage(),
               ],

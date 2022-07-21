@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:rehab_app/model/constants.dart';
+import 'package:rehab_app/views/widgets/homepage/widget_build.dart';
 
 class SessionCard extends StatelessWidget {
   final int sessionNumber;
-  final bool isCompleted;
+  final int index;
 
   const SessionCard(
-      {super.key, required this.sessionNumber, required this.isCompleted});
+      {super.key, required this.sessionNumber, required this.index});
 
   @override
   Widget build(BuildContext context) {
@@ -28,63 +29,25 @@ class SessionCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Session $sessionNumber',
+                      'Session ${index+1}',
                       style: kheading1,
                     ),
-                    isCompleted
-                        ? RawMaterialButton(
-                            onPressed: () {},
-                            elevation: 0.0,
-                            fillColor: Colors.blue,
-                            //constraints: const BoxConstraints(minWidth: 35),
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(50)),
-                            child: const Text(
-                              'Completed',
-                              style: TextStyle(color: Colors.white),
-                            ),
-                          )
-                        : Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              RawMaterialButton(
-                                onPressed: () {},
-                                elevation: 0.0,
-                                fillColor: Colors.blue,
-                                constraints: const BoxConstraints(minWidth: 5),
-                                shape: const CircleBorder(),
-                                child: const Icon(
-                                  Icons.play_arrow,
-                                  size: 25.0,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              RawMaterialButton(
-                                onPressed: () {},
-                                elevation: 0.0,
-                                fillColor: const Color(0xffe4e4e4),
-                                // padding: const EdgeInsets.all(15.0),
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(50)),
-                                child: const Text(
-                                  ' Start ',
-                                  style: TextStyle(color: Colors.black),
-                                ),
-                              ),
-                            ],
-                          )
+                    //checkCard(sessionNumber: sessionNumber,index: index),
+                    checkCard(sessionNumber: sessionNumber, index: index),
                   ],
                 ),
-                Expanded(
-                    child: SizedBox(
-                        height: 135,
-                        width: 35,
-                        child: Image.asset(
-                          img1Path,
-                          fit: BoxFit.fill,
-                        )))
+                SizedBox(
+                    height: 135,
+                    width: 125,
+                    child: Expanded(
+                      child: Image.asset(
+                        sessioncardImg[index % 4],
+                        fit: BoxFit.fill,
+                      ),
+                    ))
               ],
             )
           ],
