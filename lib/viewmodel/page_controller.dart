@@ -8,3 +8,7 @@ class DashboardController extends GetxController {
     update();
   }
 }
+
+class HomeController extends GetxController {
+  final String title = 'Home Title';
+}

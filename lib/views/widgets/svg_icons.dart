@@ -10,3 +10,9 @@ final Widget tickSvg = SvgPicture.asset(
   tickPath,
   color: const Color(0xffa3d066),
 );
+final Widget hourglassSvg = SvgPicture.asset(
+  hourglassPath,
+);
+final Widget dumbellSvg = SvgPicture.asset(
+  dumbellPath,
+);

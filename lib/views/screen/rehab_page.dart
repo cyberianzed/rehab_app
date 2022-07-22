@@ -41,7 +41,7 @@ class RehabPage extends StatelessWidget {
             const HistoryCard(),
             ListView.builder(
                 physics: const NeverScrollableScrollPhysics(),
-                itemCount: 30,
+                itemCount: 4,
                 scrollDirection: Axis.vertical,
                 shrinkWrap: true,
                 itemBuilder: (BuildContext ctxt, int index) {

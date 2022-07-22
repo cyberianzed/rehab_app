@@ -64,7 +64,7 @@ class ProgressCard extends StatelessWidget {
                     width: 5,
                   ),
                   Text(
-                    'Completed\n$completedSession Sessions',
+                    'Completed\n$sessionNumber Sessions',
                     style: kstatus,
                   ),
                 ],

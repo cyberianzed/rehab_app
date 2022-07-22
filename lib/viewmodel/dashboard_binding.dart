@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
-import 'package:rehab_app/viewmodel/home_controller.dart';
+import 'package:rehab_app/viewmodel/my_controller.dart';
 
-import 'dashboard_controller.dart';
+import 'page_controller.dart';
 
 class DashboardBinding extends Bindings {
   @override

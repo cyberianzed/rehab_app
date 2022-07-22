@@ -5,7 +5,7 @@ import 'package:rehab_app/views/screen/practice_page.dart';
 import 'package:rehab_app/views/screen/profile_page.dart';
 import 'package:rehab_app/views/screen/rehab_page.dart';
 
-import '../../viewmodel/dashboard_controller.dart';
+import '../../viewmodel/page_controller.dart';
 import 'homepage.dart';
 
 class DashboardPage extends StatelessWidget {
@@ -20,8 +20,8 @@ class DashboardPage extends StatelessWidget {
             child: IndexedStack(
               index: controller.tabIndex,
               children: const [
-                RehabPage(),
                 HomePage(),
+                RehabPage(),
                 PracticePage(),
                 ProfilePage(),
               ],

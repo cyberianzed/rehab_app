@@ -21,7 +21,6 @@ class CustomListTile extends StatelessWidget {
             child: Expanded(
               child: Image.asset(
                 rehabpageImg[index % 2],
-               // 'assets/a.png',
                 fit: BoxFit.fill,
               ),
             )),
