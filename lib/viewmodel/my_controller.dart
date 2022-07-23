@@ -1,14 +1,24 @@
 import 'package:get/get.dart';
-
-import '../model/constants.dart';
+import 'package:rehab_app/model/constants.dart';
 
 class MyController extends GetxController {
-  int sessionNumber = 0;
+  int _sessionNumber = 0;
+  int _pendingSession = totalsessions;
+  int get sessionNumber => _sessionNumber;
+  int get pendingSession => _pendingSession;
 
   void incSessionNumber() {
-    sessionNumber++;
-    update();
+    if (_sessionNumber < totalsessions) {
+      _sessionNumber++;
+      _pendingSession--;
+      update();
+    }
+  }
+
+  String calPercent() {
+    return ((mycontroller.sessionNumber / totalsessions) * 100)
+        .toStringAsFixed(2);
   }
 }
 
-final MyController controller = Get.put(MyController());
+final mycontroller = Get.put(MyController());

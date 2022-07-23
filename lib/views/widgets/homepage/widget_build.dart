@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:rehab_app/model/constants.dart';
 
 import 'homepage_button.dart';
+
+String time = DateFormat("hh:mm a").format(DateTime.now());
 
 Widget checkCard({required int sessionNumber, required int index}) {
   if (sessionNumber >= index) {
     if (sessionNumber > index) {
       return Column(
-        children: const [
-          HomePageButton(
-            
-          ),
-          Text('Performed At'),
-          //TODO update from db
-          Text('8:12 AM'),
+        children: [
+          const HomePageButton(),
+          const Text('Performed At'),
+          Text(time),
         ],
       );
     } else {

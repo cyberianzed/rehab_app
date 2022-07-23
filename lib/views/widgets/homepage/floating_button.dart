@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../model/constants.dart';
 import '../../../model/database/database.dart';
+import '../../../viewmodel/my_controller.dart';
 
 class FloatingButton extends StatelessWidget {
   const FloatingButton({
@@ -11,9 +12,9 @@ class FloatingButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RawMaterialButton(
-      onPressed: () async {
-        sessionNumber++;
-        createData();
+      onPressed: () {
+        mycontroller.incSessionNumber();
+        //createData();
       },
       elevation: 0.0,
       fillColor: kblueColor,

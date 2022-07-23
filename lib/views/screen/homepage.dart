@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:rehab_app/viewmodel/my_controller.dart';
 import 'package:rehab_app/views/widgets/homepage/session_card.dart';
 import '../../model/constants.dart';
 import '../widgets/homepage/floating_button.dart';
@@ -9,7 +11,6 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
     return Scaffold(
       floatingActionButton: const SizedBox(
         height: 50,
@@ -26,18 +27,20 @@ class HomePage extends StatelessWidget {
               'Good Morning\nJane',
               style: kheading,
             ),
-            const ProgressCard(),
-            ListView.builder(
-                physics: const NeverScrollableScrollPhysics(),
-                itemCount: 30,
-                scrollDirection: Axis.vertical,
-                shrinkWrap: true,
-                itemBuilder: (BuildContext ctxt, int index) {
-                  return SessionCard(
-                    sessionNumber: sessionNumber,
-                    index: index,
-                  );
-                }),
+             ProgressCard(),
+            GetBuilder<MyController>(
+              builder: (controller) => ListView.builder(
+                  physics: const NeverScrollableScrollPhysics(),
+                  itemCount: totalsessions,
+                  scrollDirection: Axis.vertical,
+                  shrinkWrap: true,
+                  itemBuilder: (BuildContext ctxt, int index) {
+                    return SessionCard(
+                      //sessionNumber: controller.sessionNumberG,
+                      index: index,
+                    );
+                  }),
+            )
           ]),
         ),
       ),

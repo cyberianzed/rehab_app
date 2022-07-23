@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:rehab_app/model/constants.dart';
 import 'package:rehab_app/views/widgets/svg_icons.dart';
+import '../../../viewmodel/my_controller.dart';
 
 class ProgressCard extends StatelessWidget {
   const ProgressCard({Key? key}) : super(key: key);
@@ -28,28 +30,28 @@ class ProgressCard extends StatelessWidget {
                 "Today's Progress",
                 style: kheading1,
               ),
-              const Text(
-                '50%',
-                style: TextStyle(
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold,
-                    color: Color.fromARGB(255, 45, 83, 210)),
-              )
+              GetBuilder<MyController>(
+                  init: mycontroller,
+                  builder: (controller) => Text(
+                        '${mycontroller.calPercent()}%',
+                        style: const TextStyle(
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold,
+                            color: Color.fromARGB(255, 45, 83, 210)),
+                      ))
             ],
           ),
-          // const SizedBox(
-          //   height: 10,
-          // ),
           ClipRRect(
-            borderRadius: BorderRadius.circular(5),
-            child: LinearProgressIndicator(
-              value: .5,
-              color: kblueColor,
-              backgroundColor: const Color(0xffc4c4c4),
-              //TODO Heigh
-              minHeight: 7,
-            ),
-          ),
+              borderRadius: BorderRadius.circular(5),
+              child: GetBuilder<MyController>(
+                init: mycontroller,
+                builder: (controller) => LinearProgressIndicator(
+                  value: mycontroller.sessionNumber / totalsessions,
+                  color: kblueColor,
+                  backgroundColor: const Color(0xffc4c4c4),
+                  minHeight: 7,
+                ),
+              )),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -63,10 +65,12 @@ class ProgressCard extends StatelessWidget {
                   const SizedBox(
                     width: 5,
                   ),
-                  Text(
-                    'Completed\n$sessionNumber Sessions',
-                    style: kstatus,
-                  ),
+                  GetBuilder<MyController>(
+                      init: mycontroller,
+                      builder: (controller) => Text(
+                            'Completed\n${mycontroller.sessionNumber} Sessions',
+                            style: kstatus,
+                          )),
                 ],
               ),
               Row(
@@ -79,10 +83,12 @@ class ProgressCard extends StatelessWidget {
                   const SizedBox(
                     width: 5,
                   ),
-                  Text(
-                    'Pending\n$pendingSession Sessions',
-                    style: kstatus,
-                  ),
+                  GetBuilder<MyController>(
+                      init: mycontroller,
+                      builder: (controller) => Text(
+                            'Pending\n${mycontroller.pendingSession} Sessions',
+                            style: kstatus,
+                          )),
                 ],
               ),
             ],

@@ -21,12 +21,12 @@ class HistoryCard extends StatelessWidget {
             Row(
               children: [
                 SizedBox(
-                height: 20,
-                width: 20,
-                child: dumbellSvg,
-              ),
+                  height: 20,
+                  width: 20,
+                  child: dumbellSvg,
+                ),
                 Text(
-                  '16',
+                  ' $totalsessions',
                   style: kheading1,
                 ),
               ],
@@ -51,7 +51,7 @@ class HistoryCard extends StatelessWidget {
                 child: hourglassSvg,
               ),
               Text(
-                '16',
+                ' $totalsessions',
                 style: kheading1,
               ),
             ],

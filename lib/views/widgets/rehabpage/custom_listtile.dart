@@ -18,11 +18,9 @@ class CustomListTile extends StatelessWidget {
         leading: SizedBox(
             height: 50,
             width: 50,
-            child: Expanded(
-              child: Image.asset(
-                rehabpageImg[index % 2],
-                fit: BoxFit.fill,
-              ),
+            child: Image.asset(
+              rehabpageImg[index % 2],
+              fit: BoxFit.fill,
             )),
         title: Column(
           children: [

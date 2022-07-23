@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 
-int sessionNumber = 0;
-var pendingSession = 30 - sessionNumber;
-
+int totalsessions = 5;
 const String arrowPath = 'assets/arrow.svg';
 const String tickPath = 'assets/tick.svg';
 const String dumbellPath = 'assets/dumbbell.svg';
 const String hourglassPath = 'assets/hourglass.svg';
+const String pcImg = 'assets/pc.png';
 
 var kblueColor = const Color.fromARGB(255, 45, 83, 210);
 
