@@ -8,13 +8,16 @@ final sessionRef = database.child('sessions/');
 void createData() {
   String date = DateFormat("dd-MM-yyyy").format(DateTime.now());
   String time = DateFormat("hh:mm:ss a").format(DateTime.now());
-  database.child('sessions/$date').update({time: 'Session${mycontroller.sessionNumber}'});
+  database
+      .child('sessions/$date')
+      .update({time: 'Session${mycontroller.sessionNumber}'});
 }
 
-
-
-// void readData(){
-//   databaseReference.once().then((DataSnapshot snapshot) {
-//     print('Data : ${snapshot.value}');
-//   });
-// }
+void read() {
+  String date = DateFormat("dd-MM-yyyy").format(DateTime.now());
+  DatabaseReference countRef = FirebaseDatabase.instance.ref('sessions/$date');
+  countRef.onValue.listen((DatabaseEvent event) {
+    // ignore: unused_local_variable
+    var sessionlength = event.snapshot.children.length;
+  });
+}

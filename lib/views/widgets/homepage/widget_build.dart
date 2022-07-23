@@ -5,6 +5,7 @@ import 'package:rehab_app/model/constants.dart';
 import 'homepage_button.dart';
 
 String time = DateFormat("hh:mm a").format(DateTime.now());
+String date = DateFormat("dd-MM-yyyy").format(DateTime.now());
 
 Widget checkCard({required int sessionNumber, required int index}) {
   if (sessionNumber >= index) {

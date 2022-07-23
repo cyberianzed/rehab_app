@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_state.dart';
 import 'package:rehab_app/model/constants.dart';
 import 'package:rehab_app/views/widgets/homepage/widget_build.dart';
-
 import '../../../viewmodel/my_controller.dart';
 
 class SessionCard extends StatelessWidget {
@@ -17,7 +16,6 @@ class SessionCard extends StatelessWidget {
         builder: (controller) => Container(
             height: 160,
             width: double.infinity,
-            //TODO
             margin: const EdgeInsets.only(top: 10, left: 30),
             decoration: BoxDecoration(
               border: Border.all(

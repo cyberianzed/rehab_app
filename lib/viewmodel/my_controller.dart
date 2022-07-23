@@ -8,11 +8,9 @@ class MyController extends GetxController {
   int get pendingSession => _pendingSession;
 
   void incSessionNumber() {
-    if (_sessionNumber < totalsessions) {
-      _sessionNumber++;
-      _pendingSession--;
-      update();
-    }
+    _sessionNumber++;
+    _pendingSession--;
+    update();
   }
 
   String calPercent() {

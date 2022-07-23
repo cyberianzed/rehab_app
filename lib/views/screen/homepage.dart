@@ -27,7 +27,7 @@ class HomePage extends StatelessWidget {
               'Good Morning\nJane',
               style: kheading,
             ),
-             ProgressCard(),
+             const ProgressCard(),
             GetBuilder<MyController>(
               builder: (controller) => ListView.builder(
                   physics: const NeverScrollableScrollPhysics(),

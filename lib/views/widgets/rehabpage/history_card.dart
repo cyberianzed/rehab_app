@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:rehab_app/model/constants.dart';
-import 'package:rehab_app/model/size.dart';
 import 'package:rehab_app/views/widgets/svg_icons.dart';
 
 class HistoryCard extends StatelessWidget {
@@ -8,8 +7,6 @@ class HistoryCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var height = SizeConfig.getHeight(context);
-    var width = SizeConfig.getWidth(context);
     return Card(
       color: Colors.grey[200],
       elevation: 0,

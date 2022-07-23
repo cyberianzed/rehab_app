@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rehab_app/views/widgets/homepage/widget_build.dart';
 
 import '../../../model/constants.dart';
 
@@ -25,16 +26,10 @@ class CustomListTile extends StatelessWidget {
         title: Column(
           children: [
             Row(
-              children: const [
-                Icon(Icons.access_time_rounded),
-                Text('10:20am')
-              ],
+              children: [const Icon(Icons.access_time_rounded), Text(time)],
             ),
             Row(
-              children: const [
-                Icon(Icons.calendar_today_outlined),
-                Text('20-11-2020')
-              ],
+              children: [const Icon(Icons.calendar_today_outlined), Text(date)],
             )
           ],
         ),

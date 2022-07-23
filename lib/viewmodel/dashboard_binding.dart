@@ -1,5 +1,4 @@
 import 'package:get/get.dart';
-import 'package:rehab_app/viewmodel/my_controller.dart';
 
 import 'page_controller.dart';
 

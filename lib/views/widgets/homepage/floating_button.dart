@@ -13,8 +13,12 @@ class FloatingButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return RawMaterialButton(
       onPressed: () {
-        mycontroller.incSessionNumber();
-        //createData();
+        if (mycontroller.sessionNumber < totalsessions) {
+          mycontroller.incSessionNumber();
+          createData();
+        }
+        read();
+        
       },
       elevation: 0.0,
       fillColor: kblueColor,
