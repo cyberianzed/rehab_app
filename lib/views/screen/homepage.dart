@@ -27,7 +27,7 @@ class HomePage extends StatelessWidget {
               'Good Morning\nJane',
               style: kheading,
             ),
-             const ProgressCard(),
+            const ProgressCard(),
             GetBuilder<MyController>(
               builder: (controller) => ListView.builder(
                   physics: const NeverScrollableScrollPhysics(),
@@ -36,7 +36,6 @@ class HomePage extends StatelessWidget {
                   shrinkWrap: true,
                   itemBuilder: (BuildContext ctxt, int index) {
                     return SessionCard(
-                      //sessionNumber: controller.sessionNumberG,
                       index: index,
                     );
                   }),

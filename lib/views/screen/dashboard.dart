@@ -23,6 +23,7 @@ class DashboardPage extends StatelessWidget {
                 HomePage(),
                 RehabPage(),
                 PracticePage(),
+
                 ProfilePage(),
               ],
             ),

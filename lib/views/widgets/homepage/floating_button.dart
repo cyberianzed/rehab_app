@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../../model/constants.dart';
 import '../../../model/database/database.dart';
 import '../../../viewmodel/my_controller.dart';
@@ -18,11 +17,9 @@ class FloatingButton extends StatelessWidget {
           createData();
         }
         read();
-        
       },
       elevation: 0.0,
       fillColor: kblueColor,
-      //constraints: const BoxConstraints(minHeight: 55),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,

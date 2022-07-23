@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-int totalsessions = 5;
+int totalsessions = 30;
 const String arrowPath = 'assets/arrow.svg';
 const String tickPath = 'assets/tick.svg';
 const String dumbellPath = 'assets/dumbbell.svg';
