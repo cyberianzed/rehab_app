@@ -1,16 +1,18 @@
-# rehab_app
+# RehabApp
 
-A new Flutter project.
+A Flutter project with  
+-Clean ui  
+-MVVC Architecture  
+-GetX State management  
+-Firebase Realtime DataBase  
 
-## Getting Started
+  
+# Screenshot
+<img src="/ss/a.png" alt="drawing" width="250"/>&nbsp;&nbsp;&nbsp;&nbsp; <img src="/ss/b.png" alt="drawing" width="250"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="/ss/c.gif" alt="drawing" width="250"/>&nbsp;&nbsp;&nbsp;&nbsp;  
+  
+  
+# Backend  
+<img src="/ss/aa.png" alt="drawing" width="450"/>&nbsp;
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# More info
+Detailed video of complete app and realtime dB [**Here**](https://drive.google.com/drive/folders/1BQhnnG4yWI1zCh9G5XA9kxFfdTHKtgmZ?usp=sharing )
